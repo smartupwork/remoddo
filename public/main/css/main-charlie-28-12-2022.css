@@ -1,0 +1,225 @@
+.btn--green{
+    background-color: #18FB9B;
+}
+
+.input-colums.colums-5{
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.input-colums.colums-5 .input-col-6{
+    width: 50%; 
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.input-colums.colums-5 .input-col-3{
+    width: 25%; 
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.return-label .post-row{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.thank-you .modal__body{
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.thank-you .modal__header{
+    padding-top: 70px;
+    padding-bottom: 0;
+}
+
+.select-date .modal__header{
+    padding-bottom: 0;
+}
+
+.select-date .btn-close{
+    top: 30px;
+}
+
+.air-datepicker{
+    width: 308px;
+    border: 1px solid #DFDFDF;
+}
+
+.air-datepicker-cell{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    width: 44px;
+    height: 44px;
+}
+
+.air-datepicker-cell.-selected-,
+.air-datepicker-cell.-selected-.-focus-{
+    background: #FFF275;
+    color: #000000;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.air-datepicker-body--cells.-days-{
+    grid-auto-rows: 44px;
+}
+
+.air-datepicker-body--day-name{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    width: 44px;
+    height: 44px;
+}
+
+.air-datepicker-nav--title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.air-datepicker--content{
+    padding: 0;
+}
+
+.air-datepicker-nav--title i{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.air-datepicker-nav--action path{
+    stroke: #000000;
+}
+
+.air-datepicker-nav--action{
+    width: 44px;
+    height: 44px;
+}
+
+.air-datepicker-nav{
+    padding: 0;
+}
+
+.write-address.active .address-active{
+    display: none;
+}
+
+.write-address{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.write-address__drop{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.center-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px);
+}
+
+.billing-address{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.billing-address__list{
+    padding-left: 16px;
+    border-left: 4px solid var(--warning);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.billing-address__list li:not(:last-child){
+    margin-bottom: 4px;
+}
+
+.btn--outline.black-border{
+    border: 1.5px solid #000000;
+}
+
+.card-details{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 1px rgba(26, 32, 36, 0.32), 0px 1px 2px rgba(91, 104, 113, 0.32);
+    border-radius: 3px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.card-details__number{
+    width: 65%;
+    flex: 0 0 65%;
+    padding: 11px 10px 11px 40px;
+    color: #000000;
+}
+
+.card-details__month{
+    width: 20%;
+    flex: 0 0 20%;
+    padding: 11px 10px;
+    color: #000000;
+}
+
+.card-details__cvc{
+    width: 15%;
+    flex: 0 0 15%;
+    padding: 11px 10px;
+    color: #000000;
+}
+
+.card-details__img{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card-details__number::placeholder,
+.card-details__month::placeholder,
+.card-details__cvc::placeholder{
+    opacity: 0.4;
+}
+
+
+.info{display: flex;}
+
+.fw-600{font-weight: 600;}
+.fw-700{font-weight: 700;}
+.fw-900{font-weight: 900;}
+.p-7{padding: 7px;}
+.fs-14{font-size: 14px;}
+.mb-12{margin-bottom: 12px;}
+.mb-14{margin-bottom: 14px;}
+.mb-24{margin-bottom: 24px;}
+.mb-30{margin-bottom: 30px;}
+
+.mt-10{margin-top: 10px;}
+
+.mr-12{margin-right: 12px;}
+
+.ml-10{margin-left: 10px;}
+.ml-auto{margin-left: auto;}
+
+.h-100{height: 100%;}
+
+.ttu{text-transform: uppercase;}

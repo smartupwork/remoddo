@@ -1,0 +1,74 @@
+.delete-image {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.relative {
+    position: relative;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.border-underline {
+    border-bottom: 4px solid #FFF275;
+}
+.card-number{
+    display: flex;
+    align-items: center;
+}
+.w-100 {
+    width: 100%;
+}
+.input-save input{
+    pointer-events: none;
+    background: rgba(0,0,0,.03);
+}
+.fs-14{font-size: 14px;}
+.radius-5{
+    border-radius: 5px !important;
+}
+
+.input-save input{
+    border: none !important;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+    font-size: 14px;
+}
+.invoice{
+    width: 200px;
+    filter: blur(1px);
+    box-shadow: 0px 0px 15px #000;
+}
+.w-50{
+    width: 30px;
+    max-width: 30px;
+    min-width: 30px;
+}
+.input-save.active--adit input{
+    padding-left: 5px !important;
+    background: #fff !important;
+}
+.input-save .btn-success{
+    display: none;
+}
+.input-save.active--adit input{
+    pointer-events: all;
+    
+}
+.input-save.active--adit .btn-success{
+    display: block;
+}
+.input-save.active--adit .btn-edit{
+    display: none;
+}
+.product-image-wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+}

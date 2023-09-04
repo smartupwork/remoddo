@@ -1,0 +1,140 @@
+.profile-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-user h3 {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.profile-user a {
+    color: #000000;
+    min-width: 20px;
+}
+.profile-user a:hover {
+    color: #F4B208;
+}
+.user_avatar_wrpr {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-user .user_avatar_wrpr {
+    margin-right: 14px;
+}
+.user_avatar_wrpr img {
+    min-width: 100%;
+    object-fit: cover;
+}
+.sidebar_nav li+li {
+    margin-top: 2px;
+}
+.sidebar_nav li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.sidebar_nav li a.active {
+    background: #FFF275;
+}
+.sidebar_nav li a:not(.active):hover {
+    color: #F4B208;
+}
+.sidebar_nav li a .icon_wrpr {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.sidebar_nav li.devider_line {
+    height: 1px;
+    background: #DFDFDF;
+    margin: 10px 0;
+}
+.category-page__content .choices__inner {
+    border: 1px solid #DFDFDF;
+    border-radius: 3px;
+    box-shadow: none;
+}
+.badge {
+    width: fit-content;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.yellow-bg {
+    background: #FFF275;
+}
+.sm_square_image {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    overflow-y: hidden;
+    border-radius: 3px;
+}
+.sm_square_image img {
+    min-width: 100%;
+    object-fit: cover;
+}
+.table thead.fsz-12 th {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 12px 20px;
+}
+.border-card {
+    border: 1px solid #DFDFDF;
+    border-radius: 3px;
+    padding: 30px;
+}
+.change_avatar_block {
+    display: flex;
+    align-items: center;
+}
+.change_avatar_block .avatar_wrpr {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.change_avatar_block .avatar_wrpr img, 
+.messages-chat__message .user-avatar-wrpr img {
+    min-width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.fsz-14 {
+    font-size: 14px;
+    line-height: 20px;
+}
+.mb-4px {
+    margin-bottom: 4px;
+}
+.mb-2px {
+    margin-bottom: 2px;
+}
+.max-w-630 {
+    max-width: 630px;
+}
+footer.border-top {
+    border-top: 1px solid #000;
+}

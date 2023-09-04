@@ -1,0 +1,123 @@
+:root {
+    --defaultTextColor: #000;
+    --lightTextColor: rgba(0, 0, 0, 0.3);
+    --bgDark: #000;
+    --white: #fff;
+    --warning:  #FFF275;
+    --warning-2: #FFFC47;
+    --lightGray: #DFDFDF;
+    --grey-200: #F5F5F5;
+    --success-bold: #214E34;
+    --info-light: #A1B5D8;
+    --info-med: #5E34AD;
+    /* tipografy */
+    --fotnFamily: 'Nunito Sans', sans-serif;
+    --kanit: 'Kanit', sans-serif;
+    --defaultFontSize: 16px;
+    --defaultLineHeight: 18px;
+    --h1Size: 40px;
+    --h2Size: 30px;
+    --h3Size: 24px;
+    --h4Size: 18px;
+    --h5Size: 14px;
+    --defaultRaduis: 3px;
+}
+
+body {
+    font-size: 100%;
+    font-weight: normal;
+    font-family: var(--fotnFamily);
+    font-weight: 400;
+    font-size: var(--defaultFontSize);
+    line-height: var(--defaultLineHeight);
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: var(--defaultTextColor);
+}
+.fw-700 {
+    font-weight: 700;
+}
+.fs-14 {
+    font-size: 14px;
+}
+body.lock {
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: bold;
+    font-family: var(--fotnFamily);
+    line-height: 120%;
+}
+
+h1 {
+    font-size: var(--h1Size);
+}
+
+h2 {
+    font-size: var(--h2Size);
+}
+
+h3 {
+    font-size: var(--h3Size);
+}
+
+h4 {
+    font-size: var(--h4Size);
+}
+
+h5 {
+    font-size: var(--h5Size);
+}
+
+.input,
+.textarea {
+    padding: 10px 0;
+    font-size:  var(--defaultFontSize);
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid #BABDDB;
+}
+input,
+button,
+textarea {
+    font-family: var(--fotnFamily);
+    -webkit-appearance: none;
+    appearance: none;
+}
+.radius-3 {
+    border-radius: var(--defaultRaduis);
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+.header-fixed {
+    padding-top: 69px;
+}
+.content {
+    flex: auto;
+}
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.container-xl {
+    max-width: 1390px;
+}
+.ttu {
+    text-transform: uppercase;
+}

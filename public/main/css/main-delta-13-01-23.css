@@ -1,0 +1,22 @@
+.stars-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.stars-container .star + .star {
+    margin-right: 15px;
+}
+.star {
+    color: var(--white);
+}
+  .star.star--checked {
+    color: var(--warning-2);
+  }
+
+  .star:hover,
+  .star:hover ~ .star,
+  .star.star--checked,
+  .star.star--checked ~ .star{
+    color: var(--warning-2);
+  }
+  
+  

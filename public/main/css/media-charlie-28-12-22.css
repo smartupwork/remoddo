@@ -1,0 +1,108 @@
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (max-width: 575.98px) {
+    .center-block .btn{
+        width: 100%;
+        margin-right: 0;
+    }
+    .rent-page__group-img .rent-page__img{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .rent-page__group-img{
+        flex-wrap: wrap;
+    }
+    .select-date .modal__footer{
+        flex-direction: column;
+    }
+
+    .select-date  .btn--warning{
+        margin-top: 10px;
+    }
+
+    .input-colums.colums-5 .input-col-3{
+        width: 100%; 
+    }
+
+    .input-colums.colums-5 .input-col-6{
+        width: 100%; 
+    }
+
+    .return-label .btn-close{
+        top: 33px;
+    }
+
+    .return-label .modal__header {
+        padding-top: 40px;
+    }
+
+    .select-date .modal__header {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 369.98px) {
+    .air-datepicker{
+        width: 240px;
+    }
+
+    .air-datepicker-nav--action{
+        width: 30px;
+        height: 30px;
+    }
+    .air-datepicker-body--day-name{
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .air-datepicker-cell{
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .air-datepicker-body--cells.-days-{
+        grid-auto-rows: 30px;
+    }
+
+    .air-datepicker-nav--action svg{
+        width: 30px;
+        height: 30px;
+    }
+
+    .select-date .modal__footer .fs-14{
+        font-size: 12px;
+    }
+
+    .select-date .data-picker-wrapper{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

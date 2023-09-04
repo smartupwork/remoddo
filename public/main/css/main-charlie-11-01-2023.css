@@ -1,0 +1,44 @@
+.order-details__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.order-details__item-title{
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.order-details__item-info{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.send-back .btn-close{
+    top: 15px;
+    transform: none;
+    right: 15px;
+}
+
+.btn--dark.disable{
+    pointer-events: none;
+    background-color:#F5F5F5;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.btn--black{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.min-w-150{min-width: 150px;}
+.ml-14{margin-left: 14px;}
+
+@media (max-width: 369.98px) {
+    .min-w-150{min-width: 75px;}
+}

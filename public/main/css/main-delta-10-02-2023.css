@@ -1,0 +1,19 @@
+.notification {
+    position: relative;
+}
+.notification::after {
+    content: attr(data-messages);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 300px;
+    background-color: #FF9C9C;
+    font-size: 12px;
+    padding: 8px;
+    color: #000;
+}

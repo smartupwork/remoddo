@@ -1,0 +1,41 @@
+.rent-page__subtitle {
+    opacity: 0.3;
+}
+
+.px-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.min-w-20 {
+    min-width: 20px;
+    flex: 0 0 20px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.bot-answer .messages-chat__avatar {
+    background-color: #FFF275;
+    align-items: center;
+    justify-content: center;
+}
+.bot-answer.messages-chat__message--res .messages-chat__cloud {
+    background-color: transparent;
+    border:1px solid rgba(255, 242, 117, 1);
+}
+
+.radius-300 {
+    border-radius: 300px;
+}
+
+.category-page__aside {
+    min-height: calc(100vh - 205px);
+}
+
+.category-page__aside-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

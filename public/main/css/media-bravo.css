@@ -1,0 +1,136 @@
+@media (max-width: 1400.98px) {
+    .category-btn-prev {
+        left: 10px;
+    }
+    .category-btn-next {
+        right: 10px;
+    }
+    .swiper.slider-categoryes {
+        overflow: visible;
+    }
+}
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { /* max-width: 991.98px */
+
+    .category-page__content {
+        flex: auto;
+        max-width: 100%;
+    }
+    .category-page__aside {
+        position: fixed;
+        left: -250px;
+        margin-right: 0;
+        z-index: 20;
+        background-color: var(--white);
+        height: calc(100vh - 65px);
+        top: 65px;
+        width: 250px;
+        transition: all .2s ease;
+    }
+    .category-page__aside.active {
+        left: 0;
+        box-shadow: 3px 0px 12px 5px rgba(0, 0, 0, 0.2);
+    }
+    .category-page__aside-container {
+        padding: 20px;
+        overflow: auto;
+        max-height: 100%;
+    }
+    .category-page__aside-container .custom-checkbox {
+        width: 100%;
+    }
+    .category-page__content {
+        width: 100%;
+    }
+    .sidebar-open {
+        position: absolute;
+        top: 20%;
+        right: -50px;
+        width: 50px;
+        height: 50px;
+        background-color: #FFF275;
+        border-radius: 50%;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        padding: 12px;
+        /*display: flex !important;*/
+        transition: all .2s ease;
+        
+    }
+    .category-page__aside.active .sidebar-open {
+        background-color: #000;
+        color: #FFF275;
+    }
+    .sidebar-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .pt-header {
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    .what-is {
+        display: flex;
+    }
+    .what-is__image {
+        flex: 0 0 50%;
+        position: relative;
+        padding-bottom: 31.5%;
+    }
+    .what-is__image img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .what-is__content {
+        display: flex;
+        align-items: center;
+        flex: 0 0 100%;
+        transform: translate(-50%);
+    }
+    .what-is__content .container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .what-is__body {
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        max-width: 50%;
+        width: 100%;
+    }
+    
+    .what-is__text {
+        max-width: 400px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,28 @@
+.item-status-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--warning);
+    border-radius: 3px;
+    z-index: 3;
+    /* padding: 2px 6px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px; */
+}
+
+.btn-disabled {
+    background-color: var(--grey-200);
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.btn--md-2 {
+    padding: 10px 12px;
+}
+
+.btn--sm-2 {
+    padding: 8px 14px;
+}
+.btn--reject {
+    background-color: #FF9C9C;
+}

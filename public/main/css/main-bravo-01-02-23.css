@@ -1,0 +1,39 @@
+.delete-todo {
+    opacity: .3;
+}
+.custom-checkbox:hover > .delete-todo {
+    opacity: 1;
+}
+
+.messages-chatlist__avatar > img {
+    width: 100%;
+}
+.messages-chat__message--req {
+    justify-content: end;
+}
+.messages-chat__cloud .messages-chat__name {
+    margin-right: 10px;
+}
+
+.chat-input {
+    max-height: 80px;
+}
+
+.chat-input {
+    scrollbar-width: 4px;
+}
+.chat-input::-webkit-scrollbar {
+    width: 4px;
+    background: none;
+}
+.chat-input::-webkit-scrollbar-track {
+    background: none;
+}
+.chat-input::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: var(--warning);
+}
+
+.messages-chat__footer {
+    align-items: flex-end;
+}
