@@ -49,7 +49,7 @@
 {{--                  </span>--}}
 {{--               </a>--}}
                 @if(auth()->check())
-                    <a href="{{route('main.profile.lender.overview')}}" class="btn btn--transp btn--sm -ttu radius-3 hidden-992">
+                    <a href="{{route('main.profile.user.rentals')}}" class="btn btn--transp btn--sm -ttu radius-3 hidden-992">
                   <span class="info">
                      {{auth()->user()->email}}
                   </span>
@@ -154,7 +154,7 @@
          <div class="dbl-btns dbl-btns--row">
              @if(auth()->check())
                  <div>
-                     <a href="{{route('main.profile.lender.overview')}}" class="btn btn--dark btn--sm radius-3 -ttu mb-3 w-100">
+                     <a href="{{route('main.profile.user.rentals')}}" class="btn btn--dark btn--sm radius-3 -ttu mb-3 w-100">
 
                   <span class="info">
                      {{auth()->user()->email}}

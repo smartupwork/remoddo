@@ -72,7 +72,7 @@
                                 {{--                    </a>--}}
                                 <div class="user-dropdown dropdown btn hidden-992">
                                     @if(auth()->check())
-                                        <a href="{{route('main.profile.lender.overview')}}"
+                                        <a href="{{route('main.profile.user.rentals')}}"
                                            class="btn--sm -ttu dropdown-btn">
                                             <div class="wrapper-image photo-30 r-300">
                                                 <img src="{{asset(auth()->user()->info->avatar)}}"/>
@@ -198,7 +198,7 @@
                     <div class="visible-992 menu--item">
                         <div class="user-dropdown dropdown btn r-3">
                             @if(auth()->check())
-                                <a href="{{route('main.profile.lender.overview')}}"
+                                <a href="{{route('main.profile.user.rentals')}}"
                                    class="btn btn--sm -ttu btn--transp dropdown-btn">
                                     <div class="wrapper-image photo-30 r-300">
                                         <img src="{{asset(auth()->user()->info->avatar)}}"/>
