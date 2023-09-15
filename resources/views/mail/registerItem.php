@@ -48,7 +48,7 @@
 
 <body style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; background-color: #ffffff; color: #718096; height: 100%; line-height: 1.4; margin: 0; padding: 0; width: 100% !important;">
 
-<h1>your item {{$context}} has been requested. </h1>
+<h1>An item has been requested please visit your dashboard to have a look!</h1>
 </body>
 
 </html>

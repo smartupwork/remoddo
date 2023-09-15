@@ -12,15 +12,17 @@ use Illuminate\Queue\SerializesModels;
 class SendItemWasRequestedMail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $context;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(private string $context)
+    public function __construct($context)
     {
-        //
+        $this->context = $context;
+       
     }
 
     /**
@@ -28,28 +30,18 @@ class SendItemWasRequestedMail extends Mailable
      *
      * @return \Illuminate\Mail\Mailables\Envelope
      */
-    public function envelope()
-    {
-        return new Envelope(
-            subject: 'Send Item Wasrequested Mail',
-        );
-    }
+    
 
     /**
      * Get the message content definition.
      *
      * @return \Illuminate\Mail\Mailables\Content
      */
-    public function content()
+    public function build()
     {
-        return new Content(
-            view: 'mail.ItemWasRegistered',
-            with: [
-                'context' => $this->context
-            ]
-        );
+        return $this->view('mail.registerItem', ['context' => $this->context])
+                    ->subject('Send Item Was requested');
     }
-
     /**
      * Get the attachments for the message.
      *

@@ -43,25 +43,19 @@ class Product extends Model
     public static function customSelected()
     {
         
-        $is_liked=0;
-        $is_rented=0;
-        if (auth()->check()){
-           
-            $is_liked="exists(select pl.product_id from product_likes as pl where pl.product_id=products.id and pl.user_id=".auth()->user()->id." )";
+        $is_liked = 0;
+        $is_rented = 0;
+        
+        if (auth()->check()) {
+            $is_liked = "EXISTS(SELECT pl.product_id FROM product_likes AS pl WHERE pl.product_id = products.id AND pl.user_id = " . auth()->user()->id . ")";
         }
-        // echo ('*,'.$is_liked.' as is_liked,
-        // exists(select o.product_id from orders o where (o.product_id=products.id AND
-        //       o.exp_date>=now()) or products.is_not_available=1) as is_rented,
-        // (select image from product_images pi where pi.product_id=products.id and pi.is_main=1 order by pi.id desc limit 1) as image,
-        // (select title from brands where brands.id=products.brand_id) as brand_title
-        //       ');
-        //       exit;
-        return self::selectRaw('*,'.$is_liked.' as is_liked,
-       exists(select o.product_id from orders o where (o.product_id=products.id AND
-             o.exp_date>=now()) or products.is_not_available=1) as is_rented,
-       (select image from product_images pi where pi.product_id=products.id and pi.is_main=1 order by pi.id desc limit 1) as image,
-       (select title from brands where brands.id=products.brand_id) as brand_title
-             ');
+        
+        $is_rented = "EXISTS(SELECT o.product_id FROM orders o WHERE o.product_id = products.id AND o.status != 'declined' AND o.exp_date >= NOW() OR products.is_not_available = 1)";
+        
+        return self::selectRaw('*, ' . $is_liked . ' AS is_liked, ' . $is_rented . ' AS is_rented, 
+            (SELECT image FROM product_images pi WHERE pi.product_id = products.id AND pi.is_main = 1 ORDER BY pi.id DESC LIMIT 1) AS image, 
+            (SELECT title FROM brands WHERE brands.id = products.brand_id) AS brand_title');
+        
 
              
     }

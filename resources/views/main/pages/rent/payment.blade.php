@@ -82,12 +82,8 @@
                         <label class="label-custom">*</label>
                         <select class="select-default">
                             <option value="">Holiday</option>
-                            <option>Holiday</option>
-                            <option>Adress 2</option>
-                            <option>Adress 3</option>
-                            <option>Adress 4</option>
-                            <option>Adress 5</option>
-                            <option>Adress 6</option>
+                            <option>Birthday</option>
+                            <option>Daily wear</option>
                         </select>
                     </div>
 

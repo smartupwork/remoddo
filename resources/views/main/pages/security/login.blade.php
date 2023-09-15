@@ -41,10 +41,10 @@
                             </div>
 
                             <button type="submit" class="btn btn--dark btn--md radius-3 mb-4 w-100 ttu">Login</button>
-                            <a href="{{route('main.security.google-login')}}" class="btn btn--outline outlie-dark btn--md radius-3 w-100">
+                            {{-- <a href="{{route('main.security.google-login')}}" class="btn btn--outline outlie-dark btn--md radius-3 w-100">
                                 <img src="{{asset('main/img/icons/logos_google-icon.svg')}}" alt="">
                                 <span class="ms-3">Login with Google</span>
-                            </a>
+                            </a> --}}
                         </form>
                         <p class="text-center">Don’t have an account yet? <a href="{{route('main.security.registration.form')}}" class="fw-700">Sign Up</a></p>
                         <p class="text-center"><a href="{{route('forget.password.get')}}" class="fw-700">Forgot Password</a></p>
