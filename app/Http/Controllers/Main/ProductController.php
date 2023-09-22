@@ -14,6 +14,7 @@ use App\Repository\ProductRepository;
 use App\Utils\Sorting\ProductSorting;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -67,7 +68,15 @@ class ProductController extends Controller
                     ->pluck('value')->join(', ')
             ];
         }
+        $reviews = DB::table('reviews')
+        ->join('user_infos', 'reviews.user_id', '=', 'user_infos.user_id')
+        ->select('reviews.*', 'user_infos.name as user_name', 'user_infos.avatar as user_image')
+        ->where('reviews.product_id', $product->id)
+        ->get();
+    // dd($reviews);
+    // exit;
         return view('main.pages.product.detail', [
+            'reviews' => $reviews,
             'product' => $product,
             'attributes' => $attribute_list,
             'random_products' => $random_products,
@@ -138,6 +147,7 @@ class ProductController extends Controller
         $products = $this->productRepository->products();
         $productCount=$this->productRepository->productCount();
         if ($request->ajax()) {
+            
             return $this->jsonSuccess('', [
                 'data' => $products->select('title')->limit(10)->pluck('title')
             ]);

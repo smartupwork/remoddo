@@ -43,6 +43,7 @@
                         </tr>
                         </thead>
                         <tbody>
+                            {{-- {{dd($orders)}} --}}
                         @foreach($orders as $order)
                             <tr>
                                 <td>
@@ -58,10 +59,10 @@
                                 </td>
                                 <td>
                                     <div class="item-renter">
-                                        <span class="item-renter__name three-dots">{{$order->renter->info->full_name}}</span>
+                                        {{-- <span class="item-renter__name three-dots">{{$order->renter->info->name}}</span> --}}
                                         <div class="item-renter__rating">
                                             <img src="{{asset('main/img/icons/icon-star.svg')}}">
-                                            <span class="pl-5">{{$order->renter->rating}}</span>
+                                            {{-- <span class="pl-5">{{$order->renter->rating}}</span> --}}
                                         </div>
                                     </div>
                                 </td>
@@ -79,7 +80,7 @@
                                                class="btn btn--warning btn--sm radius-3 ttu mr-10 order-status-popup"
                                                data-url="{{route('main.order.popup-detail',$order)}}"
                                                data-modal="#request-accept-order">Accept</a>
-                                            <a href="#"
+                                               <a href=""
                                                data-url="{{route('main.profile.user.order.change-status',['order'=>$order->id])}}"
                                                class="btn btn--outline btn--sm radius-3 ttu order-status-btn"
                                                data-status="declined">Decline</a>

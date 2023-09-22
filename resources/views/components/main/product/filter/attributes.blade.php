@@ -32,7 +32,7 @@
                     </label>
                 </form>
                 <div class="d-flex flex-column checkboxes_section">
-                    @foreach($attribute->values as $value)
+                    @foreach($attribute->values->sortBy('value') as $value)
                         <label class="custom-checkbox mb-4">
                             <input name="value[{{$attribute->id}}][]"
                                    @if(request()->has("value")

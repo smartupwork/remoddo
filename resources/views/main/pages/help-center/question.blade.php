@@ -52,7 +52,7 @@
                     </a>
                     <a href="" class="btn sidebar-close  d-lg-none"><img src="img/icons/icon-close.svg"></a>
 
-                    <div class="category-page__aside-container pt-60-992">
+                    {{-- <div class="category-page__aside-container pt-60-992">
                         <p class="fs-12 ttu fw-900 mb-3">Articles in this section</p>
                         <ul class="question-page-list">
                             @foreach($question->category->questions as $category_question)
@@ -61,7 +61,7 @@
                             </li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> --}}
 
                 </aside>
                 <div class="question-page-content">

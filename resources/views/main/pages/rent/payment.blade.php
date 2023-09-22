@@ -79,11 +79,11 @@
 
                     <h4 class="fw-800 uppercase mb-20">WHY ARE YOU RENTING?</h4>
                     <div class="input-wrap mb-15 w-100">
-                        <label class="label-custom">*</label>
                         <select class="select-default">
                             <option value="">Holiday</option>
                             <option>Birthday</option>
                             <option>Daily wear</option>
+                            <option>Other</option>
                         </select>
                     </div>
 

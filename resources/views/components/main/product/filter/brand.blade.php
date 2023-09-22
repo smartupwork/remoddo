@@ -25,8 +25,17 @@
                     </button>
                 </label>
             </form>
+            @php
+            // Sort the $brands collection with custom sorting function
+            $sortedBrands = $brands->sortBy(function ($brand) {
+                // Place brands starting with special characters or numbers at the end
+                return preg_match('/^[^A-Za-z]/', $brand->title) ? 'zzz' . $brand->title : $brand->title;
+            });
+        @endphp
+
+
             <div class="d-flex flex-column checkboxes_section">
-                @foreach($brands as $brand)
+                @foreach($sortedBrands as $brand)
                     <label class="custom-checkbox mb-4">
                         <input name="brand[]"
                                @if((request()->has('brand') && in_array($brand->id,request()->get('brand')))
