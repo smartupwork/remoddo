@@ -92,8 +92,8 @@
          color: #c59b08;
          }
 </style>   
-                  @if(count($value) > 0)
-                  @foreach ($value as $value)
+                  @if(count($reviews) > 0)
+                  @foreach ($reviews as $value)
                      <div class="container">
                                     <div class="row">
                                        <div class="col mt-4">
@@ -146,11 +146,8 @@
                                                    <textarea class="form-control" name="comment" rows="6 " placeholder="Comment" maxlength="200"></textarea>
                                                 </div>
                                              </div>
-                                             @php
-                                             $url = "http://www.remodo.test/reviews/60";
-                                             $id = substr(strrchr($url, '/'), 1);
-                                             @endphp
-                                             <input type="hidden" name="productId" value="{{$id}}">
+
+                                             <input type="hidden" name="productId" value="{{$prod_id}}">
                                              <div class="mt-3 text-right">
                                                 <button class="btn btn-sm py-2 px-3 btn-info" type="submit">Submit
                                                 </button>

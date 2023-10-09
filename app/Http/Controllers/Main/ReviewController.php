@@ -16,7 +16,9 @@ class ReviewController extends Controller
         ->where('reviews.product_id', $productId)
         ->where('reviews.user_id', Auth::user()->id)
         ->get();
-        return view('main.pages.product.review',['value'=>$reviews]);
+        $data['reviews'] =  $reviews;
+        $data['prod_id'] = $productId;
+        return view('main.pages.product.review',$data);
     }
     public function reviewstore(Request $request){
         $review = new Review();
