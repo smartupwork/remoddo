@@ -22,6 +22,7 @@ use App\Http\Controllers\Main\{AttributeController,
     SecurityController,
     StripeController,
     TagController,
+    ReviewController,
     VerificationController,
     ForgotPasswordController
 };
