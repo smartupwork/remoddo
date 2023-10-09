@@ -73,8 +73,11 @@ class ProductController extends Controller
         ->select('reviews.*', 'user_infos.name as user_name', 'user_infos.avatar as user_image')
         ->where('reviews.product_id', $product->id)
         ->get();
-    // dd($reviews);
-    // exit;
+        $order = DB::table('orders')
+        ->select('id', 'product_id','renter_id', 'exp_date','status')
+        ->get();
+     //dd($order);
+     //exit;
         return view('main.pages.product.detail', [
             'reviews' => $reviews,
             'product' => $product,
@@ -83,6 +86,7 @@ class ProductController extends Controller
             'lender_products' => $lender_products,
             'redirect_url' => $redirect_url,
             'redirect_title' => $redirect_title,
+            'order' => $order,
         ]);
     }
 

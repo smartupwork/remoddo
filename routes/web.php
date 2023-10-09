@@ -58,6 +58,8 @@ Route::name('main.')->group(function () {
     Route::get('/brand/search', [BrandController::class, 'search'])->name('brand.search');
     Route::get('/tag/search', [TagController::class, 'search'])->name('tag.search');
     Route::get('/attribute-value/{attribute}/search', [AttributeController::class, 'search'])->name('attribute.search');
+    Route::get('/reviews/{productId}', [ReviewController::class, 'index'])->name('reviews.index');
+    Route::post('review-store', [ReviewController::class, 'reviewstore'])->name('review.store');
 
     Route::middleware('auth')->group(function () {
         Route::name('profile.')->prefix('/profile')->group(function () {
