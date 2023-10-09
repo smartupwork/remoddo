@@ -394,7 +394,7 @@
                                 $status=$feed->status;
                                 $rent_product_id=$feed->product_id;
                                 $product_id=$product->id;
-                                if($status='accepted'&& strtotime($exp_date) < strtotime(date('Y-m-d')) && $rent_product_id==$product_id){
+                                if($status='accepted'&& strtotime($exp_date) < strtotime(date('Y-m-d')) && $rent_product_id==$product_id && $renter_id==auth()->user()->id){
 
                                     ?>
                                 <li class="d-flex align-items-center">
