@@ -399,40 +399,16 @@
                                     ?>
                                 <li class="d-flex align-items-center">
                                 <div class="d-flex align-items-start flex-auto">
-                                    <span class="flex min-w-20">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M15.5867 15.2467C16.1025 15.7625 16.1025 16.5983 15.5867 17.1133C15.0708 17.6292 14.235 17.6292 13.72 17.1133C13.2042 16.5975 13.2042 15.7617 13.72 15.2467C14.2358 14.7308 15.0717 14.7308 15.5867 15.2467"
-                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M6.42 15.2467C6.93583 15.7625 6.93583 16.5983 6.42 17.1133C5.90417 17.6292 5.06833 17.6292 4.55333 17.1133C4.03833 16.5975 4.0375 15.7617 4.55333 15.2467C5.06917 14.7317 5.90417 14.7308 6.42 15.2467"
-                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M8.33333 3.33337H11.6667C12.1267 3.33337 12.5 3.70671 12.5 4.16671V12.5H1.66667"
-                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M4.16667 16.18H2.5C2.04 16.18 1.66667 15.8067 1.66667 15.3467V10.8334"
-                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M12.5 5.83337H16.1025C16.4433 5.83337 16.75 6.04087 16.8758 6.35754L18.2142 9.70254C18.2925 9.89921 18.3333 10.1092 18.3333 10.3209V15.2775C18.3333 15.7375 17.96 16.1109 17.5 16.1109H15.9742"
-                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M13.3333 16.1833H6.80833" stroke="black" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M18.3333 11.6667H15V8.33337H17.6667" stroke="black"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M1.66667 3.33335H5.83333" stroke="black" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M1.66667 5.83335H4.16667" stroke="black" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M2.5 8.33335H1.66667" stroke="black" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
+                                <svg class="flex min-w-20" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                        viewBox="0 0 32 32" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                    </style>
+                                    <path class="st0" d="M3,8v14c0,1.1,0.9,2,2,2h16.8l7.3,6v-6V8c0-1.1-0.9-2-2-2H5C3.9,6,3,6.9,3,8z"/>
+                                    <polygon class="st0" points="12,9.9 13.5,13.1 17,13.6 14.5,16 15.1,19.4 12,17.8 8.9,19.4 9.5,16 7,13.6 10.5,13.1 "/>
+                                    <line class="st0" x1="20" y1="13" x2="25" y2="13"/>
+                                    <line class="st0" x1="22" y1="17" x2="25" y2="17"/>
+                                    </svg>
                                     <p class="fs-14 fw-600 px-12">{!! \App\Models\Setting::get('rent_3') !!}</p>
                                 </div>
                                 <a href="{{ @route('main.reviews.index',['productId' => $product->id]) }}"
@@ -481,7 +457,8 @@
                     </div>
                 </div>
                 <div class="client-comment">
-                    <p>{{ $feed->comments }}</p>
+                    <p>{{ $feed->comments }}</p><p style="text-align: right;">{{ date('Y-m-d', strtotime($feed->created_at))}}</p>
+                    
                 </div>
             </div>
         @endforeach
