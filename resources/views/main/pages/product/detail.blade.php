@@ -383,43 +383,6 @@
                                     class="btn btn--underline-warninng address-active fs-14 fw-700"
                                     style="white-space: nowrap;"> Learn More</a>
                             </li>
-
-                            @if(count($order) > 0)
-                            <?php
-                           // $rent_status='accepted';
-                            foreach ($order as $feed){
-                                $id=$feed->id;
-                                $renter_id=$feed->renter_id;
-                                $exp_date=$feed->exp_date;
-                                $status=$feed->status;
-                                $rent_product_id=$feed->product_id;
-                                $product_id=$product->id;
-                                if($status='accepted'&& strtotime($exp_date) < strtotime(date('Y-m-d')) && $rent_product_id==$product_id && $renter_id==auth()->user()->id){
-
-                                    ?>
-                                <li class="d-flex align-items-center">
-                                <div class="d-flex align-items-start flex-auto">
-                                <svg class="flex min-w-20" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                                        viewBox="0 0 32 32" xml:space="preserve">
-                                    <style type="text/css">
-                                        .st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                                    </style>
-                                    <path class="st0" d="M3,8v14c0,1.1,0.9,2,2,2h16.8l7.3,6v-6V8c0-1.1-0.9-2-2-2H5C3.9,6,3,6.9,3,8z"/>
-                                    <polygon class="st0" points="12,9.9 13.5,13.1 17,13.6 14.5,16 15.1,19.4 12,17.8 8.9,19.4 9.5,16 7,13.6 10.5,13.1 "/>
-                                    <line class="st0" x1="20" y1="13" x2="25" y2="13"/>
-                                    <line class="st0" x1="22" y1="17" x2="25" y2="17"/>
-                                    </svg>
-                                    <p class="fs-14 fw-600 px-12">{!! \App\Models\Setting::get('rent_3') !!}</p>
-                                </div>
-                                <a href="{{ @route('main.reviews.index',['productId' => $product->id]) }}"
-                                    class="btn btn--underline-warninng address-active fs-14 fw-700"
-                                    style="white-space: nowrap;"> Review</a>
-                            </li>
-                            <?php
-                                }
-                            }
-                            ?>
-                             @endif
                         </ul>
                     </div>
                 </div>

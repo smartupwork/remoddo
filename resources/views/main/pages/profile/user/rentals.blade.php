@@ -2,6 +2,7 @@
 @section('wrapper_class')
     pt-header
 @endsection
+@if(['role'=>'lender'])
 @section('title') My Rentals @endsection
 
 @section('content')
@@ -40,6 +41,9 @@
                                 </th>
                                 <th class="text-start w-100">
                                     Actions
+                                </th>
+                                <th class="text-start w-100">
+                                    Review
                                 </th>
                             </tr>
                             </thead>
@@ -91,6 +95,20 @@
                                         </a>
                                     </div>
                                 </td>
+                                <?php
+                                $id=$order->id;
+                                $renter_id=$order->renter_id;
+                                $exp_date=$order->exp_date;
+                                $status=$order->status;
+                                $rent_product_id=$order->product_id;
+                                $product_id=$order->id;
+
+                                    ?>
+                                <td>
+                                <a href="{{ @route('main.reviews.index',['productId' => $rent_product_id]) }}"
+                                class="btn btn--outline btn--sm radius-3 ttu fs-12"
+                                    style="white-space: nowrap;"> Review</a>
+                                </td>
                             </tr>
                             @endforeach
                             </tbody>
@@ -109,6 +127,7 @@
     @include('main.sections.pages.rentals.send-back-popup')
     @include('main.sections.pages.rentals.rating-popup')
 @endsection
+@endif
 @push('scripts')
     <script src="{{asset('main/js/product_sorting.js')}}"></script>
     <script src="{{asset('main/js/renter-send-back.js')}}"></script>
