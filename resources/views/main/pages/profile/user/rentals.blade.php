@@ -52,6 +52,12 @@
                             <tr>
                                 <td>
                                     <a href="#">#{{$order->id}}</a>
+                                    @foreach ($productImages->where('product_id', $order->product_id) as $image)
+                                        <div class="d-flex">
+                                            <img  src="{{ asset($image->image)}}" alt="{{ $image->image_description }}">
+                                        </div>
+                                        @break
+                                    @endforeach
                                 </td>
                                 <td>
                                     <div class="item-renter">

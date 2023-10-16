@@ -26,6 +26,7 @@ use App\Utils\Sorting\ProductSorting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use function request;
+use App\Models\ProductImage;
 
 class UserController extends Controller
 {
@@ -56,7 +57,11 @@ class UserController extends Controller
             ->filterBy($request->all())
             ->orderByRaw("$column $sort")
             ->paginate(config('model_pagination.product.per_page'))->withQueryString();
-        return view('main.pages.profile.user.rentals', compact('orders'));
+
+        $productIds = $orders->pluck('product_id')->all();
+        $productImages = ProductImage::whereIn('product_id', $productIds)->get();
+        return view('main.pages.profile.user.rentals', compact('orders', 'productImages'));
+
     }
 
     public function detail()
